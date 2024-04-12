@@ -1,0 +1,272 @@
+* {
+    /* padding: 0; */
+    margin: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --blue-vnu: #0d2c6c;
+    --yellow-vnu: #dd8d00;
+    --gray-vnu: #e6e6e8;
+    --text-white: #fff;
+    --text-black: #000;
+    --text-gray: #e6e6e8;
+}
+
+html {
+    font-size: 12px;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--text-black);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0d2c6c;
+    text-decoration: none;
+}
+
+.bg-vnu-gray {
+    background-color: var(--gray-vnu);
+}
+
+.bg-vnu-blue {
+    background-color: var(--blue-vnu);
+}
+
+/* post-preview */
+.post-preview {
+    margin-bottom: 20px;
+}
+.post-preview__div {
+    border-top: 1px solid #eaeaea;
+}
+.post-preview__h3 {
+    font-size: 20px;
+    padding-top: 17px;
+}
+.post-preview__img {
+    width: 400px;
+    height: 240px;
+    object-fit: cover;
+}
+.post-preview__p {
+    color: #666;
+    margin-top: 25px;
+    margin-bottom: 22px;
+}
+.post-preview__span {
+    color: #666;
+}
+.post-preview__sm {
+    min-height: 100px;
+    margin-bottom: 15px;
+}
+.post-preview__h3__sm {
+    font-size: 14px;
+    font-weight: bold;
+}
+.post-preview__img__sm {
+    border: 2px solid gray;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* sidebar */
+.sidebar a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    text-decoration: none;
+}
+.sidebar {
+    height: auto;
+    background: #0d2c6c;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* post */
+.post {
+    padding: 10px;
+}
+.post .post__title a {
+    color: #0d2c6c;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.post .post__title a:hover {
+    color: red;
+}
+.post__content img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+.post__content iframe {
+    max-width: 100% !important;
+    margin-bottom: 10px;
+}
+.post__other {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+#structure {
+    padding-left: 10px;
+}
+
+#structure table,
+#structure th,
+#structure td {
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+#structure .b-all {
+    border: 1px solid #213671;
+    background-color: #213671;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px;
+}
+#structure .b-left {
+    border-left: 2px solid #213671;
+}
+#structure .b-right {
+    border-right: 2px solid #213671;
+}
+#structure .b-top {
+    border-top: 2px solid #213671;
+}
+#structure .b-bottom {
+    border-bottom: 2px solid #213671;
+}
+
+#ReactModalPortal .modal-content .user-popup-item {
+    height: 100%;
+    text-align: center;
+}
+
+#ReactModalPortal .modal-content .user-popup-item .user-avatar {
+    width: 110px;
+    height: 110px;
+    padding: 7px;
+    border-radius: 55px;
+    border: 1px dashed #f26522;
+    margin: 15px auto;
+}
+
+#ReactModalPortal .modal-content .user-popup-item .user-avatar .inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 45px;
+    border: 2px solid #f26522;
+}
+
+#ReactModalPortal .modal-content .user-popup-item .user-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#ReactModalPortal .modal-content .user-popup-item .ho-ten {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+#ReactModalPortal .modal-content .user-popup-item .chuc-vu {
+    color: #f26522;
+    font-style: italic;
+}
+
+/*  */
+.small-text {
+    font-size: 10px;
+    color: #343434;
+    text-transform: uppercase;
+}
+.member-tax {
+    border-top: 2px solid #eaeaea;
+    margin-top: 17px;
+    padding-top: 14px;
+    padding-bottom: 6px;
+}
+
+.member-tax a {
+    display: block;
+    color: #999999;
+    line-height: 1.7em;
+}
+
+.member-tax a:hover {
+    color: #46a5e5;
+}
+
+/*  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-slider {
+    max-height: 335px!important;
+  }
+}
+
+@media (max-width: 767px) {
+    #ReactModalPortal .modal-content .user-popup-item .user-avatar {
+        width: 90px;
+        height: 90px;
+        padding: 7px;
+        border-radius: 45px;
+        border: 1px dashed #f26522;
+        margin: 15px auto;
+    }
+
+    .image-slider {
+      height: auto!important;
+    }
+
+    #ReactModalPortal .modal-content .user-popup-item .user-avatar .inner {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 45px;
+        border: 2px solid #f26522;
+    }
+
+    #ReactModalPortal .modal-content .user-popup-item .user-avatar img {
+        width: 100%;
+        height: auto;
+        margin-top: -10px;
+    }
+
+    #ReactModalPortal .modal-content .user-popup-item .chuc-vu,
+    #ReactModalPortal .modal-content .user-popup-item .ho-ten {
+        font-size: 10px;
+        line-height: 13px;
+        margin-bottom: 5px;
+    }
+}
