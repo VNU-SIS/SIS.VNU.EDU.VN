@@ -2,7 +2,7 @@
   <table style="width: 98%">
     <tr>
       <td colspan="13">&nbsp;</td>
-      <td colspan="8" rowspan="2" class="b-all" data-id="1">đảng bộ</td>
+      <td colspan="8" rowspan="2" class="b-all" data-id="1">đảng ủy</td>
       <td colspan="14">&nbsp;</td>
     </tr>
 
@@ -174,7 +174,7 @@
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="20">khoa quản trị<br>kinh doanhh và<br>kinh tế sáng tạo</td>
+      <td colspan="4" rowspan="2" class="b-all" data-id="20">khoa quản trị<br>và kinh tế sáng tạo</td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="9">
         phòng tổ chức<br>- hành chính
@@ -342,10 +342,10 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #eaeaea;">
-        <h4 class="modal-title" id="exampleModalLongTitle" 
-          style="width: 100%; 
-          text-align: center; 
-          font-weight: 700; 
+        <h4 class="modal-title" id="exampleModalLongTitle"
+          style="width: 100%;
+          text-align: center;
+          font-weight: 700;
           font-style: normal;
           font-size: 15px;
           line-height: 24px;
