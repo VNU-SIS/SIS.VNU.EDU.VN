@@ -209,9 +209,9 @@
         phòng thí nghiệm<br>kỹ thuật đồng vị<br>phóng xạ ứng dụng
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
-      <td>&nbsp;</td>
-      <td colspan="4">
-      &nbsp;
+      <td class="b-bottom">&nbsp;</td>
+      <td colspan="4" rowspan="2" class="b-all" data-id="22">
+        trung tâm hợp tác<br>và đào tạo<br>quốc tế
       </td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="11">
@@ -277,8 +277,9 @@
         phòng truyền thông<br>và tuyển sinh
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
-      <td>&nbsp;</td>
-      <td colspan="4" rowspan="2">
+      <td class="b-bottom">&nbsp;</td>
+      <td colspan="4" rowspan="2" class="b-all" data-id="21">
+        phòng khảo thí<br>và bảo đảm<br>chất lượng giáo dục
       </td>
       <td>&nbsp;</td>
     </tr>
