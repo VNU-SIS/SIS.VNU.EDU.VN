@@ -211,7 +211,7 @@
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="22">
-        trung tâm hợp tác<br>và đào tạo<br>quốc tế
+        trung tâm<br>hợp tác<br> và đào tạo<br>quốc tế
       </td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="11">
@@ -242,11 +242,10 @@
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
       <td class="b-left">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
@@ -279,7 +278,7 @@
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="21">
-        phòng khảo thí<br>và bảo đảm<br>chất lượng giáo dục
+        phòng khảo thí<br>và bảo đảm<br>chất lượng<br>giáo dục
       </td>
       <td>&nbsp;</td>
     </tr>
