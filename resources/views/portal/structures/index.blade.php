@@ -11,6 +11,9 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <p>Bộ phận</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ReactModalPortal">
+  Add New Title
+</button>
             </div>
             <div class="panel-body" style="height: 70vh; overflow-y: auto;">
                 <div class="dataTable_wrapper">
@@ -80,16 +83,20 @@
           line-height: 24px;
           color: #213671;
           text-transform: uppercase;">
-          Modal title
+          Add New Level
         </h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body" style="height: 65vh; overflow-y: auto; overflow-x: hidden;">
-        <div class="row row-eq-height">
-
-        </div>
+        <form id="levelForm">
+          <div class="form-group">
+            <label for="levelTitle">Title</label>
+            <input type="text" class="form-control" id="levelTitle" name="title" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
   </div>
