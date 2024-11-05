@@ -109,7 +109,7 @@
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td colspan="6" rowspan="2" class="b-all" data-id="5">đơn vị<br>khoa học,<br>tư vấn và dịch vụ</td>
+      <td colspan="6" rowspan="2" class="b-all" data-id="18">đơn vị<br>khoa học,<br>tư vấn và dịch vụ</td>
       <td class="b-bottom"><i style="position: absolute;
         bottom: -7px;
         right: 24px; color: #213671;" class="fas fa-caret-left">&nbsp; </td>
@@ -117,7 +117,7 @@
       <td class="b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
-      <td colspan="6" rowspan="2" class="b-all" data-id="18">khoa chuyên môn</td>
+      <td colspan="6" rowspan="2" class="b-all" data-id="5">khoa chuyên môn</td>
       <td class="b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
@@ -160,21 +160,21 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="7">
+      <td colspan="4" rowspan="2" class="b-all" data-id="17">
         Trung tâm<br>khoa học<br>công nghệ<br>và hỗ trợ đào tạo
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="8">
+      <td colspan="4" rowspan="2" class="b-all" data-id="20">
         phòng thí nghiệm<br>công nghệ<br>không gian<br>phục vụ phát triển<br>bền vững
       </td>
       <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="19">
+      <td colspan="4" rowspan="2" class="b-all" data-id="7">
         khoa công nghiệp<br>văn hóa và di sản
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="20">khoa quản trị<br>và kinh tế sáng tạo</td>
+      <td colspan="4" rowspan="2" class="b-all" data-id="15">khoa quản trị<br>và kinh tế sáng tạo</td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="9">
         phòng tổ chức<br>- hành chính
@@ -205,7 +205,7 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="11">
+      <td colspan="4" rowspan="2" class="b-all" data-id="19">
         phòng thí nghiệm<br>kỹ thuật đồng vị<br>phóng xạ ứng dụng
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
@@ -214,7 +214,7 @@
         trung tâm<br>hợp tác<br> và đào tạo<br>quốc tế
       </td>
       <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="11">
+      <td colspan="4" rowspan="2" class="b-all" data-id="8">
         khoa nghệ thuật<br>và thiết kế
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
