@@ -89,7 +89,7 @@ Thêm mới
             <input type="text" class="form-control" id="levelTitle" name="title" required>
           </div>
           <div style="text-align: right;">
-            <button type="submit" class="btn btn-primary">Thêm mới</button>
+            <button type="submit" class="btn btn-primary" id="btn-create">Thêm mới</button>
             </div>
         </form>
       </div>
@@ -143,28 +143,20 @@ Thêm mới
             console.log(res);
             location.reload();
         });
-    })
-    $(document).ready(function() {
-        $('#levelForm').on('submit', function(e) {
-        e.preventDefault();
+    });
+    $(document).on("click", "#btn-create", function() {
         const title = $('#levelTitle').val();
 
         $.ajax({
-            url: '{{ route("levels.create") }}',  // Replace with your route to handle creation
-            type: 'POST',
-            data: {
-                title: title
-            },
-            success: function(response) {
-                location.reload(); // Reload the page to show the new level
-            },
-            error: function(error) {
-                console.error(error);
-                alert('An error occurred while adding the level.');
-            }
+        url: url,
+        type: 'POST',
+        data: {
+            title: title
+        }
+        }).done(function(res) {
+            location.reload();
         });
-        });
-});
+    })
 </script>
 @endsection
 @section('css')
