@@ -9,10 +9,10 @@
 <div class="row">
     <div class="col-lg-4">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" style="display: flex; flex-direction: row; justify-content: space-between;">
                 <p>Bộ phận</p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ReactModalPortal">
-  Add New Title
+Thêm mới
 </button>
             </div>
             <div class="panel-body" style="height: 70vh; overflow-y: auto;">
@@ -71,19 +71,12 @@
     <input style="display: none" type="none" value="{{ Request::get('level') }}" id="level_id">
 </div>
 <div class="modal fade" id="ReactModalPortal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #eaeaea;">
         <h4 class="modal-title" id="exampleModalLongTitle"
-          style="width: 100%;
-          text-align: center;
-          font-weight: 700;
-          font-style: normal;
-          font-size: 15px;
-          line-height: 24px;
-          color: #213671;
-          text-transform: uppercase;">
-          Add New Level
+         >
+          Thêm mới phòng ban
         </h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -92,10 +85,10 @@
       <div class="modal-body" style="height: 65vh; overflow-y: auto; overflow-x: hidden;">
         <form id="levelForm">
           <div class="form-group">
-            <label for="levelTitle">Title</label>
+            <label for="levelTitle">Tên phòng ban</label>
             <input type="text" class="form-control" id="levelTitle" name="title" required>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Thêm mới</button>
         </form>
       </div>
     </div>
