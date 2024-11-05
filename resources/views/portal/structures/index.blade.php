@@ -70,7 +70,7 @@
     <input style="display: none" type="none" value="{{ Request::get('level') }}" id="level_id">
 </div>
 
-<div class="modal fade" id="addLevelModal" tabindex="-1" role="dialog" aria-labelledby="addLevelModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="addLevelModal" tabindex="-1" role="dialog" aria-labelledby="addLevelModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
 
 @section('js')
@@ -121,31 +121,30 @@
             }
         });
         // Show modal when "Add Level" button is clicked
-        $("#btn-add-level").on("click", function() {
-            $("#addLevelModal").modal("show");
-        });
+        // $("#btn-add-level").on("click", function() {
+        //     $("#addLevelModal").modal("show");
+        // });
 
-        // Submit form via AJAX
-        $("#addLevelForm").on("submit", function(e) {
-            e.preventDefault();
-            const title = $("#levelTitle").val();
-            const description = $("#levelDescription").val();
+        // // Submit form via AJAX
+        // $("#addLevelForm").on("submit", function(e) {
+        //     e.preventDefault();
+        //     const title = $("#levelTitle").val();
 
-            $.ajax({
-                url: "{{ route('levels.create') }}",
-                type: "POST",
-                data: {
-                    title: title,
-                },
-                success: function(response) {
-                    location.reload();
-                },
-                error: function(error) {
-                    console.error("Error adding level:", error);
-                    alert("Failed to add level.");
-                }
-            });
-        });
+        //     $.ajax({
+        //         url: "{{ route('levels.create') }}",
+        //         type: "POST",
+        //         data: {
+        //             title: title,
+        //         },
+        //         success: function(response) {
+        //             location.reload();
+        //         },
+        //         error: function(error) {
+        //             console.error("Error adding level:", error);
+        //             alert("Failed to add level.");
+        //         }
+        //     });
+        // });
     });
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
