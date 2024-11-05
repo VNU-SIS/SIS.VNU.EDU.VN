@@ -73,8 +73,8 @@ Thêm mới
 <div class="modal fade" id="ReactModalPortal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background: #eaeaea;display: flex;">
-        <h4 class="modal-title" id="exampleModalLongTitle"
+      <div class="modal-header" style="background: #eaeaea;">
+        <h4 class="modal-title" id="exampleModalLongTitle" style="display: inline;"
          >
           Thêm mới phòng ban
         </h4>
@@ -142,6 +142,9 @@ Thêm mới
             console.log(res);
             location.reload();
         });
+    });
+    $(document).on("click", "#btn-create", function() {
+        alert();
     });
 </script>
 @endsection
