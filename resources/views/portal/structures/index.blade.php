@@ -27,8 +27,9 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm btn-edit" >Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-id="{{ $level->id }}">Sửa</button>
                                         <!-- Delete Button -->
+                                        <button type="button" class="btn btn-danger btn-sm btn-delete" >Xóa</button>
                                                 </div>
                                             </div>
                                         </a>
