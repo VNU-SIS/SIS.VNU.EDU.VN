@@ -147,18 +147,7 @@ Thêm mới
             location.reload();
         });
     });
-    $(document).on("click", ".btn-edit", function() {
-        const _this = $(this)
-        const url = _this.attr('data-url');
-        const id = _this.attr('data-id');
-        alert(id);
-    });
-    $(document).on("click", ".btn-delete", function() {
-        const _this = $(this)
-        const url = _this.attr('data-url');
-        const id = _this.attr('data-id');
-        alert(id);
-    });
+
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
