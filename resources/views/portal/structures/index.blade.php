@@ -11,7 +11,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <p>Bộ phận</p>
-                <button id="btn-add-level" type="button" class="btn btn-primary">Add Level</button>
+                <!-- <button id="btn-add-level" type="button" class="btn btn-primary">Add Level</button> -->
             </div>
             <div class="panel-body" style="height: 70vh; overflow-y: auto;">
                 <div class="dataTable_wrapper">
