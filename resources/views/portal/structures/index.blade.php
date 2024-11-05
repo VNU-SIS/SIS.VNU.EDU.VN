@@ -27,9 +27,9 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-url="{{ route("structures.update") }}"  data-id="{{ $level->id }}">Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-url="{{ route("structures.edit") }}"  data-id="{{ $level->id }}">Sửa</button>
                                         <!-- Delete Button -->
-                                        <button type="button" data-url="{{ route("structures.update") }}" data-id="{{ $level->id }}"  class="btn btn-danger btn-sm btn-delete" >Xóa</button>
+                                        <button type="button" data-url="{{ route("structures.delete") }}" data-id="{{ $level->id }}"  class="btn btn-danger btn-sm btn-delete" >Xóa</button>
                                                 </div>
                                             </div>
                                         </a>
@@ -151,13 +151,33 @@ Thêm mới
         const _this = $(this)
         const url = _this.attr('data-url');
         const id = _this.attr('data-id');
-        alert(id);
+        const newTitle = prompt("Mời bạn nhập tên mới cho phòng ban:");
+        $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            id,
+            title: newTitle
+        }
+        }).done(function(res) {
+            alert("Cập nhật thành công!");
+            location.reload();
+        });
     });
     $(document).on("click", ".btn-delete", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
         const id = _this.attr('data-id');
-        alert(id);
+        $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            id,
+        }
+        }).done(function(res) {
+            alert("Xóa thành công!");
+            location.reload();
+        });
     });
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)

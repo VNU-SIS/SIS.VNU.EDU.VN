@@ -69,4 +69,28 @@ class StructureController extends Controller
 
         return true;
     }
+
+    public function editLevel(Request $request)
+    {
+        $id = $request->id;
+        $title = $request->title;
+
+        // Update the level in the 'levels' table
+        DB::table('levels')
+            ->where('id', $id)
+            ->update(['title' => $title, 'updated_at' => now()]);
+
+        return true;
+    }
+
+    public function deleteLevel(Request $request)
+    {
+        // Retrieve the ID
+        $id = $request->id;
+
+        // Delete the level from the 'levels' table
+        DB::table('levels')->where('id', $id)->delete();
+
+        return true;
+    }
 }
