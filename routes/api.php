@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', 'Client\HomeController@getUserWithLevel');
 Route::post('/structures/update', 'Portal\StructureController@updateStructure')->name("structures.update");
+Route::post('/structures/create', 'Portal\StructureController@createLevel')->name("structures.create");
