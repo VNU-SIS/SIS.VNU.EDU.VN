@@ -83,6 +83,7 @@ class UserController extends Controller
                         'user_id' => $user->id,
                         'level_id' => $level,
                         'position_id' => $data['position'][$key],
+                        'display_order' => $data['display_order'][$key],
                     ]);
                 }
             }
@@ -109,10 +110,11 @@ class UserController extends Controller
                     'levels.title as level_title', 
                     'levels.id as level_id', 
                     'positions.name as position_title', 
-                    'positions.id as position_id'
+                    'positions.id as position_id',
+                    'user_level.display_order as display_order',
                 )->get();
 
-            return view('portal.users.form', compact('levels', 'user', 'positions'));
+            return view('portal.users.form', compact('levels', 'user', 'positions', 'user_level'));
         }
         
         return redirect()->route('user.list');
@@ -160,6 +162,7 @@ class UserController extends Controller
                         'user_id' => $user->id,
                         'level_id' => $level,
                         'position_id' => $data['position'][$key],
+                        'display_order' => $data['display_order'][$key],
                     ]);
                 }
             }
