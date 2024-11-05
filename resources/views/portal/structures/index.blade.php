@@ -148,7 +148,7 @@ Thêm mới
         const title = $('#levelTitle').val();
 
         $.ajax({
-        url: url,
+        url: '{{ route("levels.create") }}',
         type: 'POST',
         data: {
             title: title
