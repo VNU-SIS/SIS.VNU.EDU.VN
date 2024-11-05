@@ -143,19 +143,6 @@ Thêm mới
             location.reload();
         });
     });
-    // $(document).on("click", "#btn-create", function() {
-    //     const title = $('#levelTitle').val();
-    //     alert(title)
-    //     // $.ajax({
-    //     // url: '{{ route("levels.create") }}',
-    //     // type: 'POST',
-    //     // data: {
-    //     //     title: title
-    //     // }
-    //     // }).done(function(res) {
-    //     //     location.reload();
-    //     // });
-    // })
 </script>
 @endsection
 @section('css')
