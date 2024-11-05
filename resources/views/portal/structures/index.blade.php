@@ -89,7 +89,7 @@ Thêm mới
             <input type="text" class="form-control" id="levelTitle" name="title" required>
           </div>
           <div style="text-align: right;">
-            <button type="submit" class="btn btn-primary" id="btn-create">Thêm mới</button>
+            <button type="submit" class="btn btn-primary" id="btn-create" data-url="{{ route("structures.create") }}">Thêm mới</button>
             </div>
         </form>
       </div>
@@ -129,22 +129,34 @@ Thêm mới
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
-        const itemOrder = $('#tblLocations').sortable("toArray");
-        const level_id = $("#level_id").val()
+        const title = $('#levelTitle').val();
         $.ajax({
         url: url,
         type: 'POST',
         data: {
-            itemOrder: itemOrder,
-            level_id: level_id
+            title: title
         }
         }).done(function(res) {
-            console.log(res);
+            alert("Thêm mới thành công!");
             location.reload();
         });
     });
     $(document).on("click", "#btn-create", function() {
-        alert();
+        const _this = $(this)
+        const url = _this.attr('data-url');
+        const itemOrder = $('#tblLocations').sortable("toArray");
+        const level_id = $("#level_id").val()
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: {
+                itemOrder: itemOrder,
+                level_id: level_id
+            }
+            }).done(function(res) {
+                console.log(res);
+                location.reload();
+            });
     });
 </script>
 @endsection
