@@ -71,9 +71,9 @@ Thêm mới
     <input style="display: none" type="none" value="{{ Request::get('level') }}" id="level_id">
 </div>
 <div class="modal fade" id="ReactModalPortal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background: #eaeaea;">
+      <div class="modal-header" style="background: #eaeaea;display: flex;">
         <h4 class="modal-title" id="exampleModalLongTitle"
          >
           Thêm mới phòng ban
@@ -82,13 +82,15 @@ Thêm mới
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" style="height: 65vh; overflow-y: auto; overflow-x: hidden;">
+      <div class="modal-body">
         <form id="levelForm">
           <div class="form-group">
             <label for="levelTitle">Tên phòng ban</label>
             <input type="text" class="form-control" id="levelTitle" name="title" required>
           </div>
-          <button type="submit" class="btn btn-primary">Thêm mới</button>
+          <div style="text-align: right;">
+            <button type="submit" class="btn btn-primary">Thêm mới</button>
+            </div>
         </form>
       </div>
     </div>
@@ -142,6 +144,27 @@ Thêm mới
             location.reload();
         });
     })
+    $(document).ready(function() {
+        $('#levelForm').on('submit', function(e) {
+        e.preventDefault();
+        const title = $('#levelTitle').val();
+
+        $.ajax({
+            url: '{{ route("levels.create") }}',  // Replace with your route to handle creation
+            type: 'POST',
+            data: {
+                title: title
+            },
+            success: function(response) {
+                location.reload(); // Reload the page to show the new level
+            },
+            error: function(error) {
+                console.error(error);
+                alert('An error occurred while adding the level.');
+            }
+        });
+        });
+});
 </script>
 @endsection
 @section('css')
