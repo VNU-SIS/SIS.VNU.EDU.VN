@@ -101,7 +101,7 @@
                                                     <option value="{{ $position->id }}" {{ isset($user[$key]) ? ($user[$key]->position_id === $position->id ? "selected" : "") : "" }}>{{ $position->name }}</option>
                                                 @endforeach
                                             </select>
-                                            <input class="form-control" name="display_order[]" type="number" style="margin-right: 10px" value="1"/>
+                                            <input class="form-control" name="display_order[]" type="number" style="margin-right: 10px;width: 15rem;" value="{{ isset($user[$key]) ? $user[$key]->display_order : 1 }}"/>
                                             <button type="button" class="btn-del-row btn btn-danger"><i class="fa fa-trash"></i></button>
                                         </div>
                                     @endforeach
