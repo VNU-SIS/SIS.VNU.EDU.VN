@@ -24,7 +24,13 @@ Thêm mới
                                     <td>
                                         <a href="{{ route('structures.list') . "?level=" . $level->id }}">
                                             <div style="display: flex; flex-direction: row; justify-content: space-between; line-height: 30px;">
-                                                {{ $level->title }}
+                                                <span>{{ $level->title }}</span>
+                                                <div>
+                                        <!-- Edit Button -->
+                                        <button type="button" class="btn btn-warning btn-sm" id="btn-edit" data-id="{{$level->id}}"  data-url="{{ route("structures.edit") }}">Sửa</button>
+                                        <!-- Delete Button -->
+                                        <button type="button" class="btn btn-danger btn-sm" id="btn-delete"  data-id="{{$level->id}}"  data-url="{{ route("structures.delete") }}">Xóa</button>
+                                    </div>
                                             </div>
                                         </a>
                                     </td>
@@ -127,6 +133,27 @@ Thêm mới
         });
     });
     $(document).on("click", "#btn-create", function() {
+        const _this = $(this)
+        const url = _this.attr('data-url');
+        const title = $('#levelTitle').val();
+        $.ajax({
+        url: url,
+        type: 'POST',
+        data: {
+            title: title
+        }
+        }).done(function(res) {
+            alert("Thêm mới thành công!");
+            location.reload();
+        });
+    });
+    $(document).on("click", "#btn-edit", function() {
+        const _this = $(this)
+        const url = _this.attr('data-url');
+        const id = _this.attr('data-id');
+        alert(id)
+    });
+    $(document).on("click", "#btn-delete", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
         const title = $('#levelTitle').val();
