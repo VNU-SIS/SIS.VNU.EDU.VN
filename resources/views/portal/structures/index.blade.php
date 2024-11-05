@@ -126,7 +126,7 @@ Thêm mới
             }
         });
     });
-    $(document).on("click", "#btn-update-structure", function() {
+    $(document).on("click", "#btn-create", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
         const title = $('#levelTitle').val();
@@ -141,7 +141,7 @@ Thêm mới
             location.reload();
         });
     });
-    $(document).on("click", "#btn-create", function() {
+    $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
         const itemOrder = $('#tblLocations').sortable("toArray");
