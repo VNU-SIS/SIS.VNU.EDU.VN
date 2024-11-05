@@ -27,9 +27,8 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-id="{{ $level->id }}"  data-url="{{ route("structures.edit") }}">Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit"  data-url="{{ route("structures.edit") }}">Sửa</button>
                                         <!-- Delete Button -->
-                                        <button type="button" class="btn btn-danger btn-sm btn-delete"  data-id="{{ $level->id }}"  data-url="{{ route("structures.delete") }}">Xóa</button>
                                     </div>
                                             </div>
                                         </a>
@@ -147,7 +146,18 @@ Thêm mới
             location.reload();
         });
     });
-
+    $(document).on("click", ".btn-edit", function() {
+        const _this = $(this)
+        const url = _this.attr('data-url');
+        const id = _this.attr('data-id');
+        alert(id);
+    });
+    $(document).on("click", ".btn-delete", function() {
+        const _this = $(this)
+        const url = _this.attr('data-url');
+        const id = _this.attr('data-id');
+        alert(id);
+    });
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
