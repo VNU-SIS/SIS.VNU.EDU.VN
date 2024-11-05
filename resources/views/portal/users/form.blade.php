@@ -119,6 +119,7 @@
                                                 <option value="{{ $position->id }}">{{ $position->name }}</option>
                                             @endforeach
                                         </select>
+                                        <input class="form-control" name="display_order[]" type="number" style="margin-right: 10px;width: 15rem;" value="1"/>
                                         <button type="button" class="btn-del-row btn btn-danger"><i class="fa fa-trash"></i></button>
                                     </div>
                                 @endif
@@ -169,7 +170,7 @@
                     <option value="{{ $position->id }}">{{ $position->name }}</option>
                 @endforeach
             </select>
-            <input class="form-control" name="display_order[]" type="number" style="margin-right: 10px" value="1"/>
+            <input class="form-control" name="display_order[]" type="number" style="margin-right: 10px;width: 15rem;" value="1"/>
             <button type="button" class="btn-del-row btn btn-danger"><i class="fa fa-trash"></i></button>
         </div>
     </div>
