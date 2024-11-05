@@ -114,7 +114,7 @@ class UserController extends Controller
                     'user_level.display_order as display_order',
                 )->get();
 
-            return view('portal.users.form', compact('levels', 'user', 'positions', 'user_level'));
+            return view('portal.users.form', compact('levels', 'user', 'positions'));
         }
         
         return redirect()->route('user.list');
