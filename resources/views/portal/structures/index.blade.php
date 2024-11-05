@@ -27,9 +27,9 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-id="{{ $level->id }}">Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-url="{{ route("structures.update") }}"  data-id="{{ $level->id }}">Sửa</button>
                                         <!-- Delete Button -->
-                                        <button type="button" class="btn btn-danger btn-sm btn-delete" >Xóa</button>
+                                        <button type="button" data-url="{{ route("structures.update") }}" data-id="{{ $level->id }}"  class="btn btn-danger btn-sm btn-delete" >Xóa</button>
                                                 </div>
                                             </div>
                                         </a>
