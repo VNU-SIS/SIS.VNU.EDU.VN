@@ -131,7 +131,6 @@ Thêm mới
         const url = _this.attr('data-url');
         const itemOrder = $('#tblLocations').sortable("toArray");
         const level_id = $("#level_id").val()
-
         $.ajax({
         url: url,
         type: 'POST',
@@ -146,16 +145,16 @@ Thêm mới
     });
     $(document).on("click", "#btn-create", function() {
         const title = $('#levelTitle').val();
-
-        $.ajax({
-        url: '{{ route("levels.create") }}',
-        type: 'POST',
-        data: {
-            title: title
-        }
-        }).done(function(res) {
-            location.reload();
-        });
+        alert(title)
+        // $.ajax({
+        // url: '{{ route("levels.create") }}',
+        // type: 'POST',
+        // data: {
+        //     title: title
+        // }
+        // }).done(function(res) {
+        //     location.reload();
+        // });
     })
 </script>
 @endsection
