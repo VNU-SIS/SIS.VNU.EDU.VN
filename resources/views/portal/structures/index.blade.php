@@ -27,9 +27,9 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm btn-edit"  data-url="{{ route("structures.edit") }}">Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit" >Sửa</button>
                                         <!-- Delete Button -->
-                                    </div>
+                                                </div>
                                             </div>
                                         </a>
                                     </td>
