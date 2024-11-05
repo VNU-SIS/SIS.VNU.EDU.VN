@@ -27,9 +27,9 @@ Thêm mới
                                                 <span>{{ $level->title }}</span>
                                                 <div>
                                         <!-- Edit Button -->
-                                        <button type="button" class="btn btn-warning btn-sm" id="btn-edit" data-id="{{$level->id}}"  data-url="{{ route("structures.edit") }}">Sửa</button>
+                                        <button type="button" class="btn btn-warning btn-sm btn-edit" data-id="{{ $level->id }}"  data-url="{{ route("structures.edit") }}">Sửa</button>
                                         <!-- Delete Button -->
-                                        <button type="button" class="btn btn-danger btn-sm" id="btn-delete"  data-id="{{$level->id}}"  data-url="{{ route("structures.delete") }}">Xóa</button>
+                                        <button type="button" class="btn btn-danger btn-sm btn-delete"  data-id="{{ $level->id }}"  data-url="{{ route("structures.delete") }}">Xóa</button>
                                     </div>
                                             </div>
                                         </a>
@@ -147,26 +147,17 @@ Thêm mới
             location.reload();
         });
     });
-    $(document).on("click", "#btn-edit", function() {
+    $(document).on("click", ".btn-edit", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
         const id = _this.attr('data-id');
-        alert(id)
+        alert(id);
     });
-    $(document).on("click", "#btn-delete", function() {
+    $(document).on("click", ".btn-delete", function() {
         const _this = $(this)
         const url = _this.attr('data-url');
-        const title = $('#levelTitle').val();
-        $.ajax({
-        url: url,
-        type: 'POST',
-        data: {
-            title: title
-        }
-        }).done(function(res) {
-            alert("Thêm mới thành công!");
-            location.reload();
-        });
+        const id = _this.attr('data-id');
+        alert(id);
     });
     $(document).on("click", "#btn-update-structure", function() {
         const _this = $(this)
