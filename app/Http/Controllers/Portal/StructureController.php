@@ -56,17 +56,4 @@ class StructureController extends Controller
         
         return true;
     }
-
-    public function createLevel(Request $request)
-    {
-        // Validate incoming data
-        $title = $request->title;
-
-        // Insert new level into 'levels' table
-        $newLevelId = DB::table('levels')->insertGetId([
-            'title' => $title
-        ]);
-
-        return true;
-    }
 }
