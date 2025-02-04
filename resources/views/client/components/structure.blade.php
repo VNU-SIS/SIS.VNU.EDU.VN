@@ -270,10 +270,10 @@
       <td colspan="4" rowspan="2">
       </td>
       <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="14">
-        phòng truyền thông<br>và tuyển sinh
+      <td colspan="4" rowspan="2">
+        
       </td>
-      <td class="b-right b-bottom">&nbsp;</td>
+      <td class="b-right">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="21">
         phòng khảo thí<br>và bảo đảm<br>chất lượng<br>giáo dục
