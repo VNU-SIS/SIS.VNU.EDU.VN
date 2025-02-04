@@ -186,7 +186,7 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-      <td class="b-right">&nbsp;</td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td class="b-right">&nbsp;</td>
@@ -198,7 +198,7 @@
     </tr>
     <tr>
       <td colspan="6">&nbsp;</td>
-      <td colspan="9" class="b-left">&nbsp;</td>
+      <td colspan="9">&nbsp;</td>
       <td colspan="2" class="b-right">&nbsp;</td>
       <td colspan="11" class="b-right">&nbsp;</td>
       <td colspan="6">&nbsp;</td>
@@ -243,7 +243,7 @@
       <td class="b-left">&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td class="b-right">&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
