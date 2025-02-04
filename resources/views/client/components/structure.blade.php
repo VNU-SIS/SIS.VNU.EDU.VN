@@ -161,12 +161,12 @@
     <tr>
     <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="17">
-        Trung tâm<br>khoa học<br>công nghệ<br>và hỗ trợ đào tạo
+        Trung tâm<br>hợp tác<br>quốc tế<br>và đào tạo liên ngành
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="20">
-        phòng thí nghiệm<br>công nghệ<br>không gian<br>phục vụ phát triển<br>bền vững
+      <td colspan="4" rowspan="2" class="b-all" data-id="19">
+      phòng thí nghiệm<br>kỹ thuật đồng vị<br>phóng xạ ứng dụng
       </td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="7">
@@ -205,13 +205,11 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="19">
-        phòng thí nghiệm<br>kỹ thuật đồng vị<br>phóng xạ ứng dụng
+      <td colspan="4">
       </td>
-      <td class="b-right b-bottom">&nbsp;</td>
-      <td class="b-bottom">&nbsp;</td>
-      <td colspan="4" rowspan="2" class="b-all" data-id="22">
-        trung tâm<br>hợp tác<br> và đào tạo<br>quốc tế
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td colspan="4" rowspan="2">
       </td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="8">
