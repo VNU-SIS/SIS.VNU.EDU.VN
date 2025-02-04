@@ -163,7 +163,8 @@
       <td colspan="4" rowspan="2" class="b-all" data-id="17">
         Trung tâm<br>hợp tác<br>quốc tế<br>và đào tạo liên ngành
       </td>
-      <td>&nbsp;</td>
+      <td class="b-right b-bottom">&nbsp;</td>
+      <td class="b-bottom">&nbsp;</td>
       <td colspan="4" rowspan="2" class="b-all" data-id="19">
       phòng thí nghiệm<br>kỹ thuật đồng vị<br>phóng xạ ứng dụng
       </td>
