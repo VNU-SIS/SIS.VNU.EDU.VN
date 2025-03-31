@@ -187,7 +187,7 @@
     <tr>
     <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td class="b-right">&nbsp;</td>
       <td>&nbsp;</td>
       <td class="b-right">&nbsp;</td>
       <td>&nbsp;</td>
@@ -197,7 +197,7 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td colspan="6">&nbsp;</td>
+      <td colspan="6" class="b-right">&nbsp;</td>
       <td colspan="9">&nbsp;</td>
       <td colspan="2" class="b-right">&nbsp;</td>
       <td colspan="11" class="b-right">&nbsp;</td>
@@ -205,9 +205,10 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-      <td colspan="4">
+    <td colspan="4" rowspan="2" class="b-all" data-id="17">
+        Tạp chí<br>khoa học<br>liên ngành<br>và nghệ thuật
       </td>
-      <td>&nbsp;</td>
+      <td class="b-right b-bottom">&nbsp;</td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2">
       </td>
@@ -239,11 +240,11 @@
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
       <td class="b-right">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
@@ -271,7 +272,7 @@
       </td>
       <td>&nbsp;</td>
       <td colspan="4" rowspan="2">
-        
+
       </td>
       <td class="b-right">&nbsp;</td>
       <td class="b-bottom">&nbsp;</td>
