@@ -205,7 +205,7 @@
     </tr>
     <tr>
     <td>&nbsp;</td>
-    <td colspan="4" rowspan="2" class="b-all" data-id="17">
+    <td colspan="4" rowspan="2" class="b-all" data-id="25">
         Tạp chí<br>khoa học<br>liên ngành<br>và nghệ thuật
       </td>
       <td class="b-right b-bottom">&nbsp;</td>
