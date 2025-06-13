@@ -99,7 +99,7 @@ class PostController extends Controller
                             error_log('About to make VNU API request with token: ' . $token);
                             error_log('ArticleID: ' . $post->id);
                             error_log('ArticleTitle: ' . $post->title);
-                            error_log('ArticleSummary: ' . preg_replace('/<[^>]*>/', '', Str::limit($post->content ?? '', 200)));
+                            error_log('ArticleSummary: ' . strip_tags($post->content ? substr($post->content, 0, 200) : ''));
                             error_log('ArticleThumbnail: ' . url($post->thumbnail_url));
                             error_log('ArticleLink: ' . url('/') . '/' . $post->slug . '?category_id=' . $post->category_id);
                             $requestData = [
