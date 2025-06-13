@@ -89,18 +89,19 @@ class PostController extends Controller
                     ]);
 
                     $result = json_decode($response->getBody()->getContents(), true);
-                    \Log::info('VNU API Response: ' . json_encode($result));
-                    error_log('VNU API Response:ssss  ' . json_encode($result));
 
                     if ($result['Success']) {
                         // Store or use the token from $result['Data'] as needed
                         $token = $result['Data'];
-                        error_log('VNU API Token: ' . $token);
                         // Call VNU API to post article
                         try {
                             // Log token before making request
                             error_log('About to make VNU API request with token: ' . $token);
-
+                            error_log('ArticleID: ' . $post->id);
+                            error_log('ArticleTitle: ' . $post->title);
+                            error_log('ArticleSummary: ' . strip_tags(Str::limit($post->content, 200)));
+                            error_log('ArticleThumbnail: ' . url($post->thumbnail_url));
+                            error_log('ArticleLink: ' . url('/') . '/' . $post->slug . '?category_id=' . $post->category_id);
                             $requestData = [
                                 'headers' => [
                                     'Authorization' => 'Bearer ' . $token
