@@ -98,7 +98,10 @@ class PostController extends Controller
                         error_log('VNU API Token: ' . $token);
                         // Call VNU API to post article
                         try {
-                            $response = $client->request('POST', 'https://apife.vnu.edu.vn/MemberUnitArticle/postArticle', [
+                            // Log token before making request
+                            \Log::info('About to make VNU API request with token: ' . $token);
+
+                            $requestData = [
                                 'headers' => [
                                     'Authorization' => 'Bearer ' . $token
                                 ],
@@ -132,28 +135,27 @@ class PostController extends Controller
                                         'contents' => '5'
                                     ]
                                 ]
-                            ]);
+                            ];
 
-                            error_log('VNU API Post Request Multipart Data: ' . json_encode([
-                                'ArticleID' => $post->id,
-                                'ArticleTitle' => $post->title,
-                                'ArticleSummary' => strip_tags(Str::limit($post->content, 200)),
-                                'ArticleThumbnail' => url($post->thumbnail_url),
-                                'ArticleLink' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id,
-                                'ArticlePublishedDate' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP'),
-                                'ArticleStatus' => '5'
-                            ]));
+                            // Log request data before making request
+                            \Log::info('VNU API Request Data: ' . json_encode($requestData));
+
+                            $response = $client->request('POST', 'https://apife.vnu.edu.vn/MemberUnitArticle/postArticle', $requestData);
+
+                            // Log raw response
+                            \Log::info('VNU API Raw Response: ' . $response->getBody());
 
                             $result = json_decode($response->getBody()->getContents(), true);
-                            \Log::info('VNU API Post Response: ' . json_encode($result));
-                            error_log('VNU API Post Response: ' . json_encode($result));
+
                             if (!$result['Success']) {
                                 \Log::error('Error posting to VNU API: ' . json_encode($result));
-                                error_log('Error posting to VNU API: ' . json_encode($result));
+                            } else {
+                                \Log::info('Successfully posted to VNU API');
                             }
+
                         } catch (\Exception $e) {
-                            error_log('Error posting to VNU API: ' . $e->getMessage());
-                            \Log::error('Error posting to VNU API: ' . $e->getMessage());
+                            \Log::error('Exception posting to VNU API: ' . $e->getMessage());
+                            \Log::error('Exception trace: ' . $e->getTraceAsString());
                         }
                     }
             } catch (\Exception $e) {
