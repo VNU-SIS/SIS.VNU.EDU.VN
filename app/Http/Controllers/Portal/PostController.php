@@ -90,7 +90,7 @@ class PostController extends Controller
 
                     $result = json_decode($response->getBody()->getContents(), true);
                     \Log::info('VNU API Response: ' . json_encode($result));
-                    error_log('VNU API Response: ' . json_encode($result));
+                    error_log('VNU API Response:ssss  ' . json_encode($result));
 
                     if ($result['Success']) {
                         // Store or use the token from $result['Data'] as needed
@@ -99,7 +99,7 @@ class PostController extends Controller
                         // Call VNU API to post article
                         try {
                             // Log token before making request
-                            \Log::info('About to make VNU API request with token: ' . $token);
+                            error_log('About to make VNU API request with token: ' . $token);
 
                             $requestData = [
                                 'headers' => [
@@ -138,24 +138,24 @@ class PostController extends Controller
                             ];
 
                             // Log request data before making request
-                            \Log::info('VNU API Request Data: ' . json_encode($requestData));
+                            error_log('VNU API Request Data: ' . json_encode($requestData));
 
                             $response = $client->request('POST', 'https://apife.vnu.edu.vn/MemberUnitArticle/postArticle', $requestData);
 
                             // Log raw response
-                            \Log::info('VNU API Raw Response: ' . $response->getBody());
+                            error_log('VNU API Raw Response: ' . $response->getBody());
 
                             $result = json_decode($response->getBody()->getContents(), true);
 
                             if (!$result['Success']) {
-                                \Log::error('Error posting to VNU API: ' . json_encode($result));
+                                error_log('Error posting to VNU API: ' . json_encode($result));
                             } else {
-                                \Log::info('Successfully posted to VNU API');
+                                error_log('Successfully posted to VNU API');
                             }
 
                         } catch (\Exception $e) {
-                            \Log::error('Exception posting to VNU API: ' . $e->getMessage());
-                            \Log::error('Exception trace: ' . $e->getTraceAsString());
+                            error_log('Exception posting to VNU API: ' . $e->getMessage());
+                            error_log('Exception trace: ' . $e->getTraceAsString());
                         }
                     }
             } catch (\Exception $e) {
