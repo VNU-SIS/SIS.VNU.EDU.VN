@@ -71,7 +71,7 @@ class PostController extends Controller
             DB::commit();
 
             // kiểm tra nếu đăng bài và thuộc danh mục tin tức
-            if ($data['status'] == 0 && ($data['category_id'] == 4 || Category::where('parent_id', 4)->pluck('id')->contains($data['category_id']))) {
+            if ($data['status'] == 1 && ($data['category_id'] == 4 || Category::where('parent_id', 4)->pluck('id')->contains($data['category_id']))) {
                 // Call VNU API to get token
                 $client = new \GuzzleHttp\Client();
                 try {
@@ -95,13 +95,6 @@ class PostController extends Controller
                         $token = $result['Data'];
                         // Call VNU API to post article
                         try {
-                            // Log token before making request
-                            error_log('About to make VNU API request with token: ' . $token);
-                            error_log('ArticleID: ' . $post->id);
-                            error_log('ArticleTitle: ' . $post->title);
-                            error_log('ArticleSummary: ' . strip_tags($post->content ? substr($post->content, 0, 200) : ''));
-                            error_log('ArticleThumbnail: ' . url($post->thumbnail_url));
-                            error_log('ArticleLink: ' . url('/') . '/' . $post->slug . '?category_id=' . $post->category_id);
                             $requestData = [
                                 'headers' => [
                                     'Authorization' => 'Bearer ' . $token
@@ -117,7 +110,7 @@ class PostController extends Controller
                                     ],
                                     [
                                         'name' => 'ArticleSummary',
-                                        'contents' => strip_tags(Str::limit($post->content, 200))
+                                        'contents' => strip_tags($post->content ? substr($post->content, 0, 200) : '')
                                     ],
                                     [
                                         'name' => 'ArticleThumbnail',
