@@ -92,66 +92,79 @@ class PostController extends Controller
                     \Log::info('VNU API Response: ' . json_encode($result));
                     error_log('VNU API Response: ' . json_encode($result));
 
-                    // if ($result['Success']) {
-                    //     // Store or use the token from $result['Data'] as needed
-                    //     $token = $result['Data'];
-                    //     \Log::info('VNU API Token: ' . $token);
-                    //     // Call VNU API to post article
-                    //     try {
-                    //         $response = $client->request('POST', 'https://apife.vnu.edu.vn/MemberUnitArticle/postArticle', [
-                    //             'headers' => [
-                    //                 'Authorization' => 'Bearer ' . $token
-                    //             ],
-                    //             'multipart' => [
-                    //                 [
-                    //                     'name' => 'ArticleID',
-                    //                     'contents' => $post->id
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticleTitle',
-                    //                     'contents' => $post->title
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticleSummary',
-                    //                     'contents' => strip_tags(Str::limit($post->content, 200))
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticleThumbnail',
-                    //                     'contents' => url($post->thumbnail_url)
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticleLink',
-                    //                     'contents' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticlePublishedDate',
-                    //                     'contents' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP')
-                    //                 ],
-                    //                 [
-                    //                     'name' => 'ArticleStatus',
-                    //                     'contents' => '5'
-                    //                 ]
-                    //             ]
-                    //         ]);
-                    //         \Log::info('VNU API Post Request Multipart Data: ' . json_encode([
-                    //             'ArticleID' => $post->id,
-                    //             'ArticleTitle' => $post->title,
-                    //             'ArticleSummary' => strip_tags(Str::limit($post->content, 200)),
-                    //             'ArticleThumbnail' => url($post->thumbnail_url),
-                    //             'ArticleLink' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id,
-                    //             'ArticlePublishedDate' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP'),
-                    //             'ArticleStatus' => '5'
-                    //         ]));
+                    if ($result['Success']) {
+                        // Store or use the token from $result['Data'] as needed
+                        $token = $result['Data'];
+                        \Log::info('VNU API Token: ' . $token);
+                        error_log('VNU API Token: ' . $token);
+                        // Call VNU API to post article
+                        try {
+                            $response = $client->request('POST', 'https://apife.vnu.edu.vn/MemberUnitArticle/postArticle', [
+                                'headers' => [
+                                    'Authorization' => 'Bearer ' . $token
+                                ],
+                                'multipart' => [
+                                    [
+                                        'name' => 'ArticleID',
+                                        'contents' => $post->id
+                                    ],
+                                    [
+                                        'name' => 'ArticleTitle',
+                                        'contents' => $post->title
+                                    ],
+                                    [
+                                        'name' => 'ArticleSummary',
+                                        'contents' => strip_tags(Str::limit($post->content, 200))
+                                    ],
+                                    [
+                                        'name' => 'ArticleThumbnail',
+                                        'contents' => url($post->thumbnail_url)
+                                    ],
+                                    [
+                                        'name' => 'ArticleLink',
+                                        'contents' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id
+                                    ],
+                                    [
+                                        'name' => 'ArticlePublishedDate',
+                                        'contents' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP')
+                                    ],
+                                    [
+                                        'name' => 'ArticleStatus',
+                                        'contents' => '5'
+                                    ]
+                                ]
+                            ]);
+                            \Log::info('VNU API Post Request Multipart Data: ' . json_encode([
+                                'ArticleID' => $post->id,
+                                'ArticleTitle' => $post->title,
+                                'ArticleSummary' => strip_tags(Str::limit($post->content, 200)),
+                                'ArticleThumbnail' => url($post->thumbnail_url),
+                                'ArticleLink' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id,
+                                'ArticlePublishedDate' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP'),
+                                'ArticleStatus' => '5'
+                            ]));
+                            error_log('VNU API Post Request Multipart Data: ' . json_encode([
+                                'ArticleID' => $post->id,
+                                'ArticleTitle' => $post->title,
+                                'ArticleSummary' => strip_tags(Str::limit($post->content, 200)),
+                                'ArticleThumbnail' => url($post->thumbnail_url),
+                                'ArticleLink' => url('/') . '/' . $post->slug . '?category_id=' . $post->category_id,
+                                'ArticlePublishedDate' => $post->event_at ? Carbon::parse($post->event_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP') : Carbon::parse($post->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('Y-m-d\TH:i:sP'),
+                                'ArticleStatus' => '5'
+                            ]));
 
-                    //         $result = json_decode($response->getBody()->getContents(), true);
-                    //         \Log::info('VNU API Post Response: ' . json_encode($result));
-                    //         if (!$result['Success']) {
-                    //             \Log::error('Error posting to VNU API: ' . json_encode($result));
-                    //         }
-                    //     } catch (\Exception $e) {
-                    //         \Log::error('Error posting to VNU API: ' . $e->getMessage());
-                    //     }
-                    // }
+                            $result = json_decode($response->getBody()->getContents(), true);
+                            \Log::info('VNU API Post Response: ' . json_encode($result));
+                            error_log('VNU API Post Response: ' . json_encode($result));
+                            if (!$result['Success']) {
+                                \Log::error('Error posting to VNU API: ' . json_encode($result));
+                                error_log('Error posting to VNU API: ' . json_encode($result));
+                            }
+                        } catch (\Exception $e) {
+                            error_log('Error posting to VNU API: ' . $e->getMessage());
+                            \Log::error('Error posting to VNU API: ' . $e->getMessage());
+                        }
+                    }
             } catch (\Exception $e) {
                 \Log::error('Error calling VNU API: ' . $e->getMessage());
             }
